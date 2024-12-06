@@ -53,12 +53,20 @@ const Dashboard: React.FC<any> = (props) => {
       <div
         style={{
           display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-evenly",
+          flexDirection: "column",
+          justifyContent: "center",
           alignItems: "center",
           gap: "10px",
         }}
       >
+        <h1
+          style={{
+            fontFamily: "Alegreya Sans SC",
+            fontSize: 32,
+          }}
+        >
+          Get Food Delivered
+        </h1>
         {foodItems.map((item: Dish) => {
           return <FoodItem item={item} />;
         })}
