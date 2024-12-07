@@ -1,5 +1,6 @@
 import React from "react";
 import FoodItem from "../foodItem/FoodItem";
+import Navigation from "../topNav/Navigation";
 
 interface Dish {
   id: number;
@@ -48,8 +49,10 @@ const foodItems: Dish[] = [
 ];
 
 const Dashboard: React.FC<any> = (props) => {
+  const isLoggedIn = false;
   return (
     <React.Fragment>
+      <Navigation isLoggedIn={isLoggedIn} user="Customer" />
       <h1
         style={{
           fontFamily: "Alegreya Sans SC",
