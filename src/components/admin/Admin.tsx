@@ -1,14 +1,12 @@
 import React from "react";
 import Navigation from "../topNav/Navigation";
+import AdminLogin from "../authentication/AdminLogin";
 
-interface AdminProps {
-  isLoggedIn: boolean;
-}
-
-const Admin: React.FC<AdminProps> = (props) => {
+const Admin: React.FC<any> = (props) => {
   return (
     <React.Fragment>
-      <Navigation isLoggedIn={props.isLoggedIn} />
+      <Navigation isLoggedIn={props.isLoggedIn} user="Admin" />
+      {!props.isLoggedIn ? <AdminLogin /> : <></>}
     </React.Fragment>
   );
 };
