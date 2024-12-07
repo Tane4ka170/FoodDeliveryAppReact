@@ -50,6 +50,16 @@ const foodItems: Dish[] = [
 const Dashboard: React.FC<any> = (props) => {
   return (
     <React.Fragment>
+      <h1
+        style={{
+          fontFamily: "Alegreya Sans SC",
+          fontSize: 32,
+          textAlign: "center",
+          marginTop: "120px",
+        }}
+      >
+        Menu Items
+      </h1>
       <div
         style={{
           display: "flex",
@@ -59,14 +69,6 @@ const Dashboard: React.FC<any> = (props) => {
           gap: "10px",
         }}
       >
-        <h1
-          style={{
-            fontFamily: "Alegreya Sans SC",
-            fontSize: 32,
-          }}
-        >
-          Get Food Delivered
-        </h1>
         {foodItems.map((item: Dish) => {
           return <FoodItem item={item} />;
         })}
