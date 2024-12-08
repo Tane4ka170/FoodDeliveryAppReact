@@ -1,6 +1,7 @@
 import React from "react";
 import FoodItem from "../foodItem/FoodItem";
 import Navigation from "../topNav/Navigation";
+import styles from "./Dashboard.module.css";
 
 interface Dish {
   id: number;
@@ -46,35 +47,73 @@ const foodItems: Dish[] = [
     price: 7,
     status: "out-of-stock",
   },
+  {
+    id: 7,
+    name: "Grilled Chicken",
+    price: 12,
+    status: "in-stock",
+  },
+  {
+    id: 8,
+    name: "French Fries",
+    price: 5,
+    status: "in-stock",
+  },
+  {
+    id: 9,
+    name: "Vegetable Soup",
+    price: 8,
+    status: "out-of-stock",
+  },
+  {
+    id: 10,
+    name: "Lobster Bisque",
+    price: 25,
+    status: "in-stock",
+  },
+  {
+    id: 11,
+    name: "Steak",
+    price: 30,
+    status: "in-stock",
+  },
+  {
+    id: 12,
+    name: "Panna Cotta",
+    price: 8,
+    status: "in-stock",
+  },
+  {
+    id: 13,
+    name: "Apple Pie",
+    price: 6,
+    status: "in-stock",
+  },
+  {
+    id: 14,
+    name: "Fish Tacos",
+    price: 11,
+    status: "in-stock",
+  },
+  {
+    id: 15,
+    name: "Chocolate Lava Cake",
+    price: 9,
+    status: "out-of-stock",
+  },
 ];
 
 const Dashboard: React.FC<any> = (props) => {
-  const isLoggedIn = false;
   return (
     <React.Fragment>
-      <Navigation isLoggedIn={isLoggedIn} user="Customer" />
-      <h1
-        style={{
-          fontFamily: "Alegreya Sans SC",
-          fontSize: 32,
-          textAlign: "center",
-          marginTop: "120px",
-        }}
-      >
-        Menu Items
-      </h1>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "10px",
-        }}
-      >
-        {foodItems.map((item: Dish) => {
-          return <FoodItem item={item} />;
-        })}
+      <Navigation isLoggedIn={props.isLoggedIn} user="Customer" />
+      <div className={styles.dashboardContainer}>
+        <h1 className={styles.menuTitle}>Menu Items</h1>
+        <div className={styles.foodItemsGrid}>
+          {foodItems.map((item: Dish) => {
+            return <FoodItem item={item} />;
+          })}
+        </div>
       </div>
     </React.Fragment>
   );
