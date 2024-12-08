@@ -6,7 +6,7 @@ const Admin: React.FC<any> = (props) => {
   return (
     <React.Fragment>
       <Navigation isLoggedIn={props.isLoggedIn} user="Admin" />
-      {!props.isLoggedIn ? <AdminLogin /> : <></>}
+      <AdminLogin />
     </React.Fragment>
   );
 };
