@@ -15,7 +15,7 @@ const FoodItem: React.FC<{ item: Dish }> = (props) => {
     <React.Fragment>
       <div className={s.itemContainer}>
         <div className={s.itemTitle}>{props.item.name}</div>
-        <div className={s.itemPrice}>{props.item.price}</div>
+        <div className={s.itemPrice}>$ {props.item.price}</div>
         <div className={isAvailable ? s.itemAvailable : s.itemSold}>
           {isAvailable ? "Available" : "Stock out"}
         </div>
