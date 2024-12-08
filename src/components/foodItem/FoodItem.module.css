@@ -1,42 +1,54 @@
 .itemContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 350px;
+  width: 300px;
   border-radius: 12px;
-  padding: 10px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.itemContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.26) 0px 1px 4px;
 }
 
 .itemTitle {
-  font-size: 28px;
-  font-weight: 500;
-  margin: 10px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .itemPrice {
-  font-size: 22px;
-  font-weight: bold;
-  color: #360ab1;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 10px;
 }
 
+.itemAvailable,
 .itemSold {
-  font-size: 20px;
-  font-weight: 500;
-  margin: 5px;
-  color: #b10a64;
-  background: #0ab189;
-  padding: 5px;
-  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 10px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .itemAvailable {
-  font-size: 20px;
-  font-weight: 500;
-  margin: 5px;
-  color: #21b10a;
-  background: #360ab1;
-  padding: 5px;
-  border-radius: 8px;
+  background: #34d399;
+  box-shadow: 0 4px 6px rgba(52, 211, 153, 0.3);
+}
+
+.itemSold {
+  background: #ef4444;
+  box-shadow: 0 4px 6px rgba(239, 68, 68, 0.3);
 }
