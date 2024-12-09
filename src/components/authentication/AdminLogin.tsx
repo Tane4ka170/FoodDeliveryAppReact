@@ -15,7 +15,11 @@ const AdminLogin: React.FC<any> = (props) => {
             className={s.input}
             placeholder="Enter password"
           />
-          <Button color="white" bgColor="transparent" />
+          <Button
+            color="white"
+            bgColor="transparent"
+            label={"Verify and Login"}
+          />
         </div>
       </div>
     </React.Fragment>
