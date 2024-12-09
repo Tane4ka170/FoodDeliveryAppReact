@@ -20,7 +20,7 @@ const Button: React.FC<{
           margin: 5,
         }}
       >
-        Look what you made me do
+        {props.label}
       </button>
     </React.Fragment>
   );
