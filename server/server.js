@@ -10,7 +10,7 @@ app.use(cors());
 app.set("PORT", 8259 || PORT);
 
 app.use("/food-items", (req, res, next) => {
-  const items = [
+  const foodItems = [
     {
       id: 1,
       name: "Pizza Margherita",
@@ -102,7 +102,7 @@ app.use("/food-items", (req, res, next) => {
       status: "out-of-stock",
     },
   ];
-  res.send(items);
+  res.send(foodItems);
 });
 
 http.createServer(app).listen(app.get("PORT"), "127.0.0.1");
