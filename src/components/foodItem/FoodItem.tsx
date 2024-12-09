@@ -13,7 +13,7 @@ const FoodItem: React.FC<{ item: Dish }> = (props) => {
 
   return (
     <React.Fragment>
-      <div className={s.itemContainer}>
+      <div className={s.itemContainer} key={props.item.id}>
         <div className={s.itemTitle}>{props.item.name}</div>
         <div className={s.itemPrice}>$ {props.item.price}</div>
         <div className={isAvailable ? s.itemAvailable : s.itemSold}>
