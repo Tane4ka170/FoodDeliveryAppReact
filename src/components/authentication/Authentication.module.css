@@ -1,40 +1,47 @@
 .centeredContainer {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  background: #f8f9fa;
 }
 
 .adminLoginCart {
-  background-color: #282c34;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
+  background: linear-gradient(145deg, #ffffff, #e4e4e4);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2),
+    -8px -8px 16px rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 120px;
-  width: 400px;
+  margin-top: 100px;
+  width: 360px;
   height: auto;
-  padding: 10px;
-  gap: 15px;
+  padding: 20px;
+  gap: 20px;
 }
 
 .input {
-  border-radius: 10px;
-  background-color: transparent;
-  font-size: 15px;
-  border: 1px solid white;
-  padding: 10px;
+  border-radius: 8px;
+  background: #f1f3f5;
+  font-size: 16px;
+  border: 2px solid #ced4da;
+  padding: 12px;
+  width: 90%;
+  transition: border 0.3s, background 0.3s;
 }
 
 ::placeholder {
-  color: white;
+  color: #adb5bd;
 }
 
 .adminLoginTitle {
-  color: white;
+  color: #333;
   font-family: "Alegreya Sans SC";
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
 }
