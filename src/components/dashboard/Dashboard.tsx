@@ -17,7 +17,7 @@ const Dashboard: React.FC<any> = (props) => {
       <div className={styles.dashboardContainer}>
         <h1 className={styles.menuTitle}>Menu Items</h1>
         <div className={styles.foodItemsGrid}>
-          {props?.foodItems?.map((item: Dish) => {
+          {(props.foodItems as Dish[]).map((item: Dish) => {
             return <FoodItem item={item} />;
           })}
         </div>
