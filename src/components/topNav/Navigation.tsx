@@ -1,9 +1,12 @@
 import React from "react";
 import s from "./Navigation.module.css";
+import { useNavigate } from "react-router";
 
 type USER = "Customer" | "Admin";
 
 const Navigation: React.FC<{ isLoggedIn: boolean; user: USER }> = (props) => {
+  const router: any = useNavigate();
+
   function displayNavBar(user: USER) {
     if (user === "Customer") {
       return (
@@ -16,10 +19,7 @@ const Navigation: React.FC<{ isLoggedIn: boolean; user: USER }> = (props) => {
                 <li>Logout</li>
               </>
             ) : (
-              <li
-                onClick={() => window.alert("Login clicked")}
-                className={s.loginButton}
-              >
+              <li onClick={() => router("/login")} className={s.loginButton}>
                 Login
               </li>
             )}
