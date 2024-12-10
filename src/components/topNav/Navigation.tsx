@@ -16,7 +16,12 @@ const Navigation: React.FC<{ isLoggedIn: boolean; user: USER }> = (props) => {
                 <li>Logout</li>
               </>
             ) : (
-              <li>Login</li>
+              <li
+                onClick={() => window.alert("Login clicked")}
+                className={s.loginButton}
+              >
+                Login
+              </li>
             )}
           </ul>
         </div>
