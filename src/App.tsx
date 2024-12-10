@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import Authenticate from "./components/authentication/Authenticate";
 import Dashboard from "./components/dashboard/Dashboard";
 import Admin from "./components/admin/Admin";
+import CustomerLogin from "./components/customerLogin/CustomerLogin";
 
 const App: FC<any> = () => {
   const isLoggedIn = false;
@@ -13,8 +14,8 @@ const App: FC<any> = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch("http://127.0.0.1:8259/food-items");
-      const data = response.json();
-      return data;
+      const data = await response.json();
+      setFoodItems(data);
     };
     fetchData();
   }, []);
@@ -37,6 +38,7 @@ const App: FC<any> = () => {
             }
           />
           <Route path="/admin" element={<Admin isLoggedIn={isLoggedIn} />} />
+          <Route path="/login" element={<CustomerLogin />} />
         </Routes>
       </BrowserRouter>
     </Fragment>
