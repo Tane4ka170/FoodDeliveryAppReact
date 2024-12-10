@@ -16,8 +16,8 @@ const AdminLogin: React.FC<any> = (props) => {
             placeholder="Enter password"
           />
           <Button
-            color="white"
-            bgColor="transparent"
+            color="#333"
+            bgColor="linear-gradient(145deg, #ffffff, #e4e4e4)"
             label={"Verify and Login"}
           />
         </div>
