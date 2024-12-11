@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import Dashboard from "./components/dashboard/Dashboard";
 import Admin from "./components/admin/Admin";
 import CustomerLogin from "./components/customerLogin/CustomerLogin";
+import DescribeItem from "./components/describeItem/DescribeItem";
 
 const App: FC<any> = () => {
   const isLoggedIn = false;
@@ -37,6 +38,7 @@ const App: FC<any> = () => {
             }
           />
           <Route path="/admin" element={<Admin isLoggedIn={isLoggedIn} />} />
+          <Route path="/view-dish/:id" element={<DescribeItem />} />
         </Routes>
       </BrowserRouter>
     </Fragment>
