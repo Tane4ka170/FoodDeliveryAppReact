@@ -5,6 +5,7 @@ const Button: React.FC<{
   color: string;
   bgColor?: string;
   label?: string;
+  onClick?: () => void;
 }> = (props) => {
   const colorScheme = props.color;
   const backgroundColor = props.bgColor;
@@ -19,6 +20,7 @@ const Button: React.FC<{
           color: `${colorScheme}`,
           margin: 5,
         }}
+        onClick={props.onClick}
       >
         {props.label}
       </button>
